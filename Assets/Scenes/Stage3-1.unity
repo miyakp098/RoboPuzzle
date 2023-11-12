@@ -1892,7 +1892,7 @@ MonoBehaviour:
   prohibite_1: {fileID: 146877681}
   playerB: {fileID: 227120765}
   childObj: {fileID: 1335723976}
-  sec: 4
+  sec: 3.5
   playerBScript: {fileID: 227120767}
   playerMoveA: 1
   playerMoveB: 0
@@ -8660,7 +8660,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335723976}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.97, y: -0.07, z: 0}
+  m_LocalPosition: {x: 0.97, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -39,7 +39,7 @@ public class spellLargeSmall : MonoBehaviour
         while (true)
         {
             anim.SetTrigger("useSpell1");
-            yield return new WaitForSeconds(5.5f);
+            yield return new WaitForSeconds(3.5f);
             
         }
     }
@@ -49,7 +49,7 @@ public class spellLargeSmall : MonoBehaviour
         while (true)
         {
             anim.SetTrigger("useSpell2");
-            yield return new WaitForSeconds(5.5f);
+            yield return new WaitForSeconds(3.5f);
 
         }
     }

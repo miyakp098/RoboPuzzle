@@ -112,9 +112,9 @@ public class spellOnMoveObj : MonoBehaviour
     }
     private IEnumerator SetSpellTrigger()
     {
-        
-            anim.SetTrigger("useSpell1");
-            yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
+        anim.SetTrigger("useSpell1");
+            yield return new WaitForSeconds(1f);
             StartCoroutine(SetJumpValue());
 
 
