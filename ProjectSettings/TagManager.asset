@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - moveObj
+  - button
+  - moveFloor
+  - wall
+  - PlayerB
+  - ballLarge
+  - ballSmall
+  - door
+  - pushObj
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - ground
+  - obj
+  - player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: backGround
+    uniqueID: 2160714573
+    locked: 0
+  - name: button
+    uniqueID: 258284553
+    locked: 0
+  - name: Obj
+    uniqueID: 1208670339
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: ball
+    uniqueID: 4015791729
+    locked: 0
+  - name: book
+    uniqueID: 2186280481
+    locked: 0
+  - name: PlayerB
+    uniqueID: 3912805925
+    locked: 0
+  - name: Player
+    uniqueID: 1706296463
+    locked: 0
