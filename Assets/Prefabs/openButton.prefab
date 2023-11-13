@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openObj: {fileID: 0}
   buttonObj: {fileID: 1066281392643160824}
-  clip: {fileID: 8300000, guid: 64f81ce2b0dfc4e3fb71a25df62b593f, type: 3}
+  clip: {fileID: 8300000, guid: 0d81f9e91e4ce4f8bb529aaf7e884f50, type: 3}
 --- !u!61 &6041645438156299137
 BoxCollider2D:
   m_ObjectHideFlags: 0

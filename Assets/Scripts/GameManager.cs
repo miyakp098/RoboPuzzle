@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     private AudioSource audioSource = null;
+    private AudioSource audioSourceForSE2 = null;
 
     private float volumeBGM = 0.5f;
     public float VolumeBGM
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSourceForSE2 = gameObject.AddComponent<AudioSource>();
     }
 
     public void PlaySE(AudioClip clip)
@@ -56,11 +58,11 @@ public class GameManager : MonoBehaviour
 
     public void PlaySE2(AudioClip clip)
     {
-        if (audioSource != null)
+        if (audioSourceForSE2 != null)
         {
-            audioSource.clip = clip;
-            audioSource.loop = true;  // ループ再生を有効にします
-            audioSource.Play();
+            audioSourceForSE2.clip = clip;
+            audioSourceForSE2.loop = true;  // ループ再生を有効にします
+            audioSourceForSE2.Play();
         }
         else
         {
@@ -70,9 +72,9 @@ public class GameManager : MonoBehaviour
 
     public void StopSE(AudioClip clip)
     {
-        if (audioSource != null && audioSource.isPlaying && audioSource.clip == clip)
+        if (audioSourceForSE2 != null && audioSourceForSE2.isPlaying && audioSourceForSE2.clip == clip)
         {
-            audioSource.Stop();
+            audioSourceForSE2.Stop();
         }
     }
     //音量調節
@@ -81,6 +83,7 @@ public class GameManager : MonoBehaviour
         if (audioSource != null)
         {
             audioSource.volume = Mathf.Clamp(volume, 0f, 1f);
+            audioSourceForSE2.volume = Mathf.Clamp(volume, 0f, 1f);
         }
         else
         {

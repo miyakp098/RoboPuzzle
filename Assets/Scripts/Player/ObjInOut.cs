@@ -25,7 +25,7 @@ public class ObjInOut : MonoBehaviour
     }
 
     //大きさを変更するスクリプト
-    private float lerpSpeed = 5f; // 補間の速度。この値を変更して、スケール変更の速さを調整することができる
+    private float lerpSpeed = 8f; // 補間の速度。この値を変更して、スケール変更の速さを調整することができる
     private Vector3 initialScale;  // 初期のスケール値
     private Vector3 targetScale;   // スケール値（目標）
     private bool isScaling = false;  // スケーリング中かどうかを示すフラグ

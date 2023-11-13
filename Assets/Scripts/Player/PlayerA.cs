@@ -80,7 +80,12 @@ public class PlayerA : MonoBehaviour
     //private int currentPlayerChangeIndex = 0;
 
     private Animator anim;//アニメーション
-    private bool isUsingSpell = false; // Spellアニメーションを使っているかどうかを追跡
+    private static bool isUsingSpell = false; // Spellアニメーションを使っているかどうかを追跡
+    public static bool IsUsingSpell
+    {
+        get { return isUsingSpell; }
+        set { isUsingSpell = value; }
+    }
 
     private List<string> triggers = new List<string> { "useSpell1", "useSpell2", "useSpell3", "useSpell4"};
     private static int currentTriggerIndex = 0;
@@ -100,6 +105,10 @@ public class PlayerA : MonoBehaviour
 
     //SE
     public AudioClip changeSpellAudio;
+    public AudioClip shotSE;
+    public AudioClip shotSE2;
+    public AudioClip jumpSE;
+    private bool hasPlayedAudio = false; // 追加: SEを再生したかのフラグ
 
 
     private static bool playBoxMoveAudio = false; // このbool値でAudioClipの再生・停止をコントロール
@@ -117,6 +126,7 @@ public class PlayerA : MonoBehaviour
     private string playerChangeKeyR = "right shift";
     private string pullKey = "return";//引っ張るときのキー
 
+    
 
     private bool pushOrPull = false;
 
@@ -150,6 +160,7 @@ public class PlayerA : MonoBehaviour
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRendererB = playerB.GetComponent<SpriteRenderer>();
+        isUsingSpell = false;
 
         this.rb2d = GetComponent<Rigidbody2D>();
 
@@ -246,12 +257,13 @@ public class PlayerA : MonoBehaviour
                 if (Input.GetButtonDown("Jump") && (isGround || onObject)) // 地面またはオブジェクトの上
                 {
                     rb2d.AddForce(Vector2.up * jumpForce);
-
+                    GameManager.instance.PlaySE(jumpSE);
                 }
             }
 
             //アニメーションの処理
             anim.SetFloat("Speed", Mathf.Abs(x * speed * operable));//歩くアニメーション
+            
 
             //地面またはオブジェクトの上にいるときはジャンプモーションOFF
             if (isGround || onObject)
@@ -377,7 +389,7 @@ public class PlayerA : MonoBehaviour
     private IEnumerator WaitSeconds()
     {
         
-        yield return new WaitForSeconds(0.7f);  // 待機時間
+        yield return new WaitForSeconds(0.3f);  // 待機時間
         isChanging = false;
     }
 
@@ -466,9 +478,11 @@ public class PlayerA : MonoBehaviour
         {
             objInOut.TakeInMoveObj();
             textReadBook = ObjInOut.TextReadBook;
-        }else if (ObjInOut.InMoveObj && !CopyArea.ObjInArea)
+        }
+        else if (ObjInOut.InMoveObj && !CopyArea.ObjInArea)
         {
             objInOut.GenerateMoveObj();
+            GameManager.instance.PlaySE(shotSE);
         }
         else
         {
@@ -485,6 +499,7 @@ public class PlayerA : MonoBehaviour
         //copyAreaに障害物がある時不発にする
         if (CopyArea.UseSpellCopy || playerB.activeSelf)
         {
+            GameManager.instance.PlaySE(shotSE2);
             if (childObj != null) // childObjが設定されているか確認します。
             {
                 if(playerB.activeSelf == false)//Playerのコピーが非アクティブの時
@@ -515,7 +530,7 @@ public class PlayerA : MonoBehaviour
     {
         if (canShoot)
         {
-            
+            GameManager.instance.PlaySE(shotSE);
             //発射位置
             Vector2 playerPosForword = playerDirectionL ? new Vector2(this.transform.position.x - 0.6f, this.transform.position.y + 0.85f) : new Vector2(this.transform.position.x + 0.6f, this.transform.position.y + 0.85f);
             // 弾のプレハブから新しい弾オブジェクトを生成
@@ -528,7 +543,7 @@ public class PlayerA : MonoBehaviour
             // 発射後、次の発射まで一時停止する
             canShoot = false;
             // 1秒後に再び発射可能にする
-            Invoke("EnableShooting", 1f);
+            Invoke("EnableShooting", 0.2f);
         }
     }
 
@@ -537,7 +552,7 @@ public class PlayerA : MonoBehaviour
     {
         if (canShoot)
         {
-            
+            GameManager.instance.PlaySE(shotSE);
             //発射位置
             Vector2 playerPosForword = playerDirectionL ? new Vector2(this.transform.position.x - 0.6f, this.transform.position.y + 0.85f) : new Vector2(this.transform.position.x + 0.6f, this.transform.position.y + 0.85f);
             // 弾のプレハブから新しい弾オブジェクトを生成
@@ -550,7 +565,7 @@ public class PlayerA : MonoBehaviour
             // 発射後、次の発射まで一時停止する
             canShoot = false;
             // 1秒後に再び発射可能にする
-            Invoke("EnableShooting", 1f);
+            Invoke("EnableShooting", 0.2f);
         }
     }
     

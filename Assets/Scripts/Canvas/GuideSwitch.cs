@@ -12,8 +12,8 @@ public class GuideSwitch : MonoBehaviour
     public TextMeshProUGUI textGuide2; // TextMeshProテキストの参照
 
     private string multiLineText1 = "移動\nジャンプ\n箱の移動";
-    private string multiLineText2 = "移動\nジャンプ\n箱の移動\n魔法\n魔法切替";
-    private string multiLineText3 = "移動\nジャンプ\n箱の移動\n魔法\n魔法切替\n操作切替";
+    private string multiLineText2 = "移動\nジャンプ\n箱の移動\n銃\n銃切替";
+    private string multiLineText3 = "移動\nジャンプ\n箱の移動\n銃\n銃切替\n操作切替";
     private string multiLineText1_2 = ":  A D\n:  Space\n:  Enter+AD";
     private string multiLineText2_2 = ":  A D\n:  Space\n:  Enter+AD\n:  F\n:  W S";
     private string multiLineText3_2 = ":  A D\n:  Space\n:  Enter+AD\n:  F\n:  W S\n:  Shift";
