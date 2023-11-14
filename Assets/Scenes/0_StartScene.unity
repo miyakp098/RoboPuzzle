@@ -15343,7 +15343,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u203B\u30AD\u30FC\u30DC\u30FC\u30C9\u306E\u307F\u64CD\u4F5C\u5BFE\u5FDC\u3001\u30DE\u30A6\u30B9\u306F\u4F7F\u7528\u3057\u307E\u305B\u3093\uFF01\n"
+  m_text: "\u203B\u30AD\u30FC\u30DC\u30FC\u30C9\u3067\u64CD\u4F5C\u3057\u307E\u3059\uFF01\u30DE\u30A6\u30B9\u306F\u4F7F\u7528\u3057\u307E\u305B\u3093\uFF01\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7f9c1dc3a2743db4f8d18d6ed7d5d270, type: 2}
   m_sharedMaterial: {fileID: -2590350232415857413, guid: 7f9c1dc3a2743db4f8d18d6ed7d5d270, type: 2}

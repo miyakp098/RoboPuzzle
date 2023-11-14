@@ -7,9 +7,13 @@ public class GuideSwitch : MonoBehaviour
 {
     private string guideKey ="e";
     private static bool guideOn = false;
+    private string hintoKey = "r";
 
     public TextMeshProUGUI textGuide1; // TextMeshProテキストの参照
     public TextMeshProUGUI textGuide2; // TextMeshProテキストの参照
+    public GameObject textGuideHinto; // TextMeshProテキストの参照
+
+    public GameObject textHinto;
 
     private string multiLineText1 = "移動\nジャンプ\n箱の移動";
     private string multiLineText2 = "移動\nジャンプ\n箱の移動\n銃\n銃切替";
@@ -20,12 +24,26 @@ public class GuideSwitch : MonoBehaviour
 
     void Start()
     {
+        textGuideHinto.SetActive(false);
+        if (textHinto != null)
+        {
+            textHinto.SetActive(false);
+        }
         
     }
 
 
     void Update()
     {
+        if (Input.GetKeyDown(hintoKey))
+        {
+            textGuideHinto.SetActive(!textGuideHinto.activeSelf);
+            if(textHinto != null)
+            {
+                textHinto.SetActive(!textHinto.activeSelf);
+            }
+        }
+
         if (Input.GetKeyDown(guideKey))
         {
             guideOn = !guideOn;

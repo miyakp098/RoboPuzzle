@@ -4961,6 +4961,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2243112882107368391, guid: d4dad8ed5560a4695949be6b331517dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2758581777531615651, guid: d4dad8ed5560a4695949be6b331517dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2831677099815781108, guid: d4dad8ed5560a4695949be6b331517dd, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -8478,7 +8486,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 237c89853d07041888524fc5990fb828, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29d39d68d1a614b40a4e93da62410d63, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15764,7 +15772,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u524D\u306B\u3042\u3057\u3070\u304C\u306A\u3044\u3068\n\u30B3\u30D4\u30FC\u304C\u4F5C\u308C\u306A\u3044"
+  m_text: "\u524D\u306B\u8DB3\u5834\u304C\u306A\u3044\u3068\n\u30B3\u30D4\u30FC\u304C\u4F5C\u308C\u306A\u3044"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7f9c1dc3a2743db4f8d18d6ed7d5d270, type: 2}
   m_sharedMaterial: {fileID: -2590350232415857413, guid: 7f9c1dc3a2743db4f8d18d6ed7d5d270, type: 2}
