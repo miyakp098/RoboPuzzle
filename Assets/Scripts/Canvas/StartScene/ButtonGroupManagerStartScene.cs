@@ -8,8 +8,7 @@ public class TitleManager : MonoBehaviour
     public Image fadeImage;
     public float fadeDuration = 0.5f;
     public GameObject SelectWindow;
-    public GameObject enterKeySprite;
-
+    public GameObject enterKeySprite;    
     public ButtonTextColorTMP[] buttons;
     private int currentIndex = 0;
 
@@ -25,6 +24,7 @@ public class TitleManager : MonoBehaviour
 
     private void Update()
     {
+        Cursor.visible = false;
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && currentIndex > 0)
         {
             GameManager.instance.PlaySE(clip);

@@ -35,6 +35,8 @@ public class PlayerB : MonoBehaviour
 
     private bool onObject = false;//物の上にいる判定
 
+    //SE
+    public AudioClip jumpSE;
 
     private bool pushOrPull = false;
 
@@ -63,7 +65,12 @@ public class PlayerB : MonoBehaviour
         get { return playBoxMoveAudio; }
         set { playBoxMoveAudio = value; }
     }
-
+    private static bool isJump;
+    public static bool IsJump
+    {
+        get { return isJump; }
+        set { isJump = value; }
+    }
 
     void Start()
     {
@@ -114,25 +121,28 @@ public class PlayerB : MonoBehaviour
                 if (Input.GetButtonDown("Jump") && (isGround || onObject)) // 地面またはオブジェクトの上
                 {
                     rb2d.AddForce(Vector2.up * jumpForce);
-
+                    GameManager.instance.PlaySE(jumpSE);
                 }
             }
 
             //アニメーションの処理
             anim.SetFloat("Speed", Mathf.Abs(x * speed));//歩くアニメーション
-            if (isGround || onObject)//地面またはオブジェクトの上にいるときはジャンプモーションOFF
+            if (isGround || onObject)
             {
                 anim.SetBool("isJump", false);
                 anim.SetBool("isFall", false);
+                isJump = false;
             }
 
             if (velY > 0.5f)
             {
                 anim.SetBool("isJump", true);
+                isJump = true;
             }
             if (velY < -0.1f)
             {
                 anim.SetBool("isFall", true);
+                isJump = true;
             }
         }
 

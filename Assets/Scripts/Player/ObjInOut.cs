@@ -24,6 +24,8 @@ public class ObjInOut : MonoBehaviour
         set { moveObjInArea = value; }
     }
 
+    public AudioClip shotSE;
+
     //大きさを変更するスクリプト
     private float lerpSpeed = 8f; // 補間の速度。この値を変更して、スケール変更の速さを調整することができる
     private Vector3 initialScale;  // 初期のスケール値
@@ -152,6 +154,7 @@ public class ObjInOut : MonoBehaviour
             {
                 if (rb2dCheck.mass == 1)
                 {
+                    GameManager.instance.PlaySE(shotSE);
                     storageMoveObj = toMoveObj;
 
                     toMoveObj = null;
@@ -203,6 +206,7 @@ public class ObjInOut : MonoBehaviour
     {
         if (!storageMoveObj.activeSelf)
         {
+            GameManager.instance.PlaySE(shotSE);
             storageMoveObj.transform.position = this.transform.position;
             
             NormalSize();

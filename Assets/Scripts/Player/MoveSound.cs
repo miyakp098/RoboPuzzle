@@ -21,7 +21,9 @@ public class MoveSound : MonoBehaviour
         bool shouldPlay = (PlayerA.PlayerHorizontal != 0 || PlayerB.PlayerHorizontal != 0) &&
               (PlayerA.Speed != 0 || PlayerB.Speed != 0) &&
               !PauseGame.IsPaused &&
-              !PlayerA.IsUsingSpell;
+              !PlayerA.IsUsingSpell &&
+              (PlayerA.PlayerMoveA || PlayerA.PlayerMoveB) &&
+              (!PlayerA.IsJump) && (!PlayerB.IsJump);
         //音の処理
         // isPlayingがfalseの場合、再生を開始
         if (shouldPlay && !isPlaying)

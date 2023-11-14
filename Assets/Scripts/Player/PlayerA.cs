@@ -29,6 +29,13 @@ public class PlayerA : MonoBehaviour
         set { jumpForce = value; }
     }
 
+    private static bool isJump;//ジャンプ力
+    public static bool IsJump
+    {
+        get { return isJump; }
+        set { isJump = value; }
+    }
+
     public CameraSwitcher cameraSwitcher;
 
     //public Text textNum;//後で削除
@@ -270,15 +277,18 @@ public class PlayerA : MonoBehaviour
             {
                 anim.SetBool("isJump", false);
                 anim.SetBool("isFall", false);
+                isJump = false;
             }
 
             if (velY > 0.5f)
             {
                 anim.SetBool("isJump", true);
+                isJump = true;
             }
             if (velY < -0.1f)
             {
                 anim.SetBool("isFall", true);
+                isJump = true;
             }
         }
 
@@ -482,7 +492,6 @@ public class PlayerA : MonoBehaviour
         else if (ObjInOut.InMoveObj && !CopyArea.ObjInArea)
         {
             objInOut.GenerateMoveObj();
-            GameManager.instance.PlaySE(shotSE);
         }
         else
         {

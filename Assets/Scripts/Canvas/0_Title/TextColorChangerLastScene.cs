@@ -7,7 +7,7 @@ public class TextColorChangerLastScene : MonoBehaviour
 {
     public TMP_Text textMeshPro; // InspectorからTextMeshProUGUIコンポーネントを割り当ててください
     public float duration = 0.35f; // 色の変更にかかる時間
-
+    Color fontColor = new Color32(110, 192, 188, 255);
     // Startメソッドでコルーチンを開始します
     private void Start()
     {
@@ -27,13 +27,13 @@ public class TextColorChangerLastScene : MonoBehaviour
             float t = (Time.time - startTime) / duration;
 
             // 色を徐々に変更
-            textMeshPro.color = Color.Lerp(Color.black, Color.white, t);
+            textMeshPro.color = Color.Lerp(fontColor, Color.white, t);
 
             yield return null; // 次のフレームまで待機
         }
 
         // 1秒間待機
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2.5f);
 
         // 白から黒への変化
         startTime = Time.time; // 現在の時刻をリセット
@@ -43,7 +43,7 @@ public class TextColorChangerLastScene : MonoBehaviour
             float t = (Time.time - startTime) / duration;
 
             // 色を徐々に変更
-            textMeshPro.color = Color.Lerp(Color.white, Color.black, t);
+            textMeshPro.color = Color.Lerp(Color.white, fontColor, t);
 
             yield return null; // 次のフレームまで待機
         }

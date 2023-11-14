@@ -97,7 +97,7 @@ MonoBehaviour:
   speed: 3
   widthX: 3
   widthY: 3
-  clip: {fileID: 8300000, guid: 0d81f9e91e4ce4f8bb529aaf7e884f50, type: 3}
+  clip: {fileID: 8300000, guid: 7889a8bd4668846ae93a9185662ff982, type: 3}
 --- !u!1 &580903499424974464
 GameObject:
   m_ObjectHideFlags: 0
