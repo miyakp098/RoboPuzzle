@@ -491,6 +491,7 @@ public class PlayerA : MonoBehaviour
         }
         else if (ObjInOut.InMoveObj && !CopyArea.ObjInArea)
         {
+            Debug.Log($"{ObjInOut.InMoveObj},{!CopyArea.ObjInArea}");
             objInOut.GenerateMoveObj();
         }
         else

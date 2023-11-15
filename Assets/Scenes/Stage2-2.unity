@@ -16138,6 +16138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: moveFloor
       objectReference: {fileID: 0}
+    - target: {fileID: 1469857540311036723, guid: 2340892393855cf45949c2b10260c176, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2675069142943619813, guid: 2340892393855cf45949c2b10260c176, type: 3}
       propertyPath: widthY
       value: 6.5
@@ -16145,6 +16149,10 @@ PrefabInstance:
     - target: {fileID: 4139805530808183035, guid: 2340892393855cf45949c2b10260c176, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4480737431731443087, guid: 2340892393855cf45949c2b10260c176, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5497237790451460353, guid: 2340892393855cf45949c2b10260c176, type: 3}
       propertyPath: m_RootOrder
@@ -16203,6 +16211,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7162398267045090586, guid: 2340892393855cf45949c2b10260c176, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865998987967939199, guid: 2340892393855cf45949c2b10260c176, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5
       objectReference: {fileID: 0}

@@ -55,7 +55,8 @@ public class CopyArea : MonoBehaviour
     //playerのコピーを出す場所に障害物があるかどうかの判定
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("PlayerB") || collision.gameObject.CompareTag("button"))
+        //Button以外のオブジェクトがあったらコピーを出せない
+        if (collision.gameObject.CompareTag("button"))
         {
             objInArea = false;
         }
@@ -74,7 +75,7 @@ public class CopyArea : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("PlayerB")||collision.gameObject.CompareTag("button"))
+        if (collision.gameObject.CompareTag("button"))
         {
             objInArea = false;
         }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7493560343864803611}
   - component: {fileID: 5208673009912722055}
   - component: {fileID: 4770612498578469027}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: copyArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 647605796857990092}
   - component: {fileID: 1139442755069748265}
   - component: {fileID: 3744276083413036365}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: ObjInOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
