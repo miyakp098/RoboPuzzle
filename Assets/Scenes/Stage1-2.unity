@@ -10402,6 +10402,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6949942607319282385, guid: d4dad8ed5560a4695949be6b331517dd, type: 3}
+      propertyPath: textHinto
+      value: 
+      objectReference: {fileID: 40352046}
     - target: {fileID: 8578279202004133641, guid: d4dad8ed5560a4695949be6b331517dd, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
