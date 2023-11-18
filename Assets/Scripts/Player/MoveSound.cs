@@ -23,7 +23,8 @@ public class MoveSound : MonoBehaviour
               !PauseGame.IsPaused &&
               !PlayerA.IsUsingSpell &&
               (PlayerA.PlayerMoveA || PlayerA.PlayerMoveB) &&
-              (!PlayerA.IsJump) && (!PlayerB.IsJump);
+              (!PlayerA.IsJump) && (!PlayerB.IsJump)&&
+              (PlayerA.Operable != 0);
         //音の処理
         // isPlayingがfalseの場合、再生を開始
         if (shouldPlay && !isPlaying)

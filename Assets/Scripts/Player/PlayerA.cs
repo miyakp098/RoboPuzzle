@@ -191,11 +191,13 @@ public class PlayerA : MonoBehaviour
         {
             spriteRenderer.color = new Color32(255, 255, 255, 255);
             spriteRendererB.color = new Color32(130, 130, 130, 255);
+            PlayerB.PlayerHorizontal = 0;
         }
         else if (PlayerMoveB)
         {
             spriteRenderer.color = new Color32(130, 130, 130, 255);
             spriteRendererB.color = new Color32(255, 255, 255, 255);
+            
         }
         
 
@@ -417,7 +419,7 @@ public class PlayerA : MonoBehaviour
 
         Vector2 groundPos = new Vector2(transform.position.x,transform.position.y);
 
-        Vector2 groundArea = new Vector2(0.235f, 0.1f);//足場判定エリア
+        Vector2 groundArea = new Vector2(0.235f, 0.15f);//足場判定エリア
 
         Debug.DrawLine(groundPos + groundArea, groundPos - groundArea, Color.red);
 
