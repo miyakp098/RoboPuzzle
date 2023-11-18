@@ -244,7 +244,7 @@ public class PlayerB : MonoBehaviour
 
         Vector2 groundPos = new Vector2(transform.position.x, transform.position.y);
 
-        Vector2 groundArea = new Vector2(0.25f, 0.15f);//足場判定エリア
+        Vector2 groundArea = new Vector2(0.235f, 0.1f);//足場判定エリア
 
         Debug.DrawLine(groundPos + groundArea, groundPos - groundArea, Color.red);
 
