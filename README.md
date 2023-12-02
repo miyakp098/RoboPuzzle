@@ -38,6 +38,8 @@ ProjectSettings/
 
 
 
+
+
 ## 技術
 ・Unity（エディターのバージョン　2022.3.4f1）
 ・C#
